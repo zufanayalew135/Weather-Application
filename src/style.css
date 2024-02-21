@@ -44,6 +44,8 @@ strong {
 }
 p {
   color: rgba(0, 0, 0, 0.5);
+  line-height: 20px;
+  font-size: 16px;
 }
 .data {
   display: flex;
@@ -57,4 +59,20 @@ h1 {
   font-size: 38px;
   font-weight: 700;
   line-height: 48px;
+}
+.temprature {
+  display: flex;
+}
+.value {
+  font-size: 88px;
+  font-weight: bold;
+}
+.icon {
+  font-size: 35px;
+  margin-top: 25px;
+  margin-right: 10px;
+}
+.unit {
+  margin-top: 20px;
+  font-size: 28px;
 }
