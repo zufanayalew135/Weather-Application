@@ -3,42 +3,50 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="src/style.css" />
     <title>Weather Application</title>
   </head>
   <body>
-    <header>
-      <form>
-        <input type="search" placeholder="Enter a city..." />
-        <input type="submit" value="search" />
-      </form>
-    </header>
-    <main>
-      <div>
-        <h1>Paris</h1>
-        <p>
-          Tuesday 14:49, scattered clouds
-          <br />
-          Humidity: 66%, Wind: 3.13km/h 🌤
-        </p>
-      </div>
-      <div>12°C</div>
-    </main>
-    <footer>
-      This project was coded by
-      <a href="https://github.com/zufanayalew135" target="_blank">
-        Zufan Ayalew
-      </a>
-      open-sourced on
-      <a
-        href="https://github.com/zufanayalew135/Weather-Application"
-        target="_blank"
-      >
-        Github
-      </a>
-      and hosted on
-      <a href="https://zu-weather-application.netlify.app/" target="_blank">
-        Netlify</a
-      >
-    </footer>
+    <div class="weather-app">
+      <header>
+        <form>
+          <input
+            type="search"
+            placeholder="Enter a city..."
+            class="search-input"
+          />
+          <input type="submit" value="search" class="search-button" />
+        </form>
+      </header>
+      <main>
+        <div>
+          <h1>Paris</h1>
+          <p>
+            Tuesday 14:49, scattered clouds
+            <br />
+            Humidity: 66%, Wind: 3.13km/h 🌤
+          </p>
+        </div>
+        <div>12°C</div>
+      </main>
+      <footer>
+        This project was coded by
+        <a href="https://github.com/zufanayalew135" target="_blank">
+          Zufan Ayalew
+        </a>
+        open-sourced on
+        <a
+          href="https://github.com/zufanayalew135/Weather-Application"
+          target="_blank"
+        >
+          Github
+        </a>
+        and hosted on
+        <a href="https://zu-weather-application.netlify.app/" target="_blank">
+          Netlify</a
+        >
+      </footer>
+    </div>
   </body>
 </html>
