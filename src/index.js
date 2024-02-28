@@ -38,6 +38,8 @@ function updateWeatherInfo(response) {
   windElement.innerHTML = `${wind}km/h`;
   iconElement.innerHTML = `<img src="${response.data.condition.icon_url}" />`;
   timeElement.innerHTML = `${day} ${hours}:${minutes}`;
+
+  getForecast(response.data.city);
 }
 
 function searchCity(city) {
@@ -51,6 +53,37 @@ function click(event) {
   let searchInput = document.querySelector("#search-input");
 
   searchCity(searchInput.value);
+}
+
+function getForecast(city) {
+  let apiKey = "4a5fa8537ac0d63c3tacbe1af0b6b4co";
+  let apiUrl = `https://api.shecodes.io/weather/v1/forecast?query=${city}&key=${apiKey}`;
+  axios(apiUrl).then(displayForecast);
+}
+
+function displayForecast(response) {
+  console.log(response.data);
+  let forecastElement = document.querySelector("#forecast");
+
+  let days = ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"];
+  let forecastHtml = "";
+
+  days.forEach(function (day) {
+    forecastHtml =
+      forecastHtml +
+      `
+        <div class="weather-forecast-day">
+            <div class="weather-forecast-date">${day}</div>
+            <div class="weather-forecast-icon">🌥️</div>
+            <div class="weather-forecast-temperatures">
+              <div class="weather-forecast-temperature-max">
+                <strong>13°</strong>
+                <span class="weather-forecast-temperature-min">8°</span>
+              </div>
+            </div>
+        </div>`;
+  });
+  forecastElement.innerHTML = forecastHtml;
 }
 
 let searchFormElement = document.querySelector("#search-form");
